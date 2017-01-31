@@ -9,64 +9,66 @@ import java.util.Arrays;
  * 
  */
 public class BubbleSort {
-    int[] sortedList;
-    int[] tempList;
-    boolean swapped;
+    private int[] sortingArray;     // This array holds the received array and is completely the sorted array.
+    private boolean swapped;        // Boolean value to determine if a swap have been performed.
     
-    // Constructor
+    // Constructor. Initialize the swapped value with the value true.
     public BubbleSort() {
-        sortedList = null;
-        tempList = null;
-        swapped = true;
+        this.swapped = true;
     }
     
-    // This methods performs the sorting.
-    public int[] sort(int[] unsortedList) {
-        tempList = unsortedList;
+    // This methods performs the sorting. 
+    public void sort(int[] unsortedArray) {
+        this.sortingArray = unsortedArray;
         
         while (swapped) {
             swapped = false;
             
-            for (int i = 0; i < unsortedList.length; i++) {
-                if (i != unsortedList.length - 1) {
-                    if (unsortedList[i] > unsortedList[i + 1]) {
+            for (int i = 0; i < sortingArray.length; i++) {
+                if (i != sortingArray.length - 1) {
+                    if (sortingArray[i] > sortingArray[i + 1]) {
                         swap(i, (i + 1));
                     }
                 }
             }
         }
-        return tempList;
+        //return sortingArray;
     }
     
-    // This method performs sorting just as sort(int[] unsortedList does, but prints the progress of the sorting.
-    public int[] sortShowFull(int[] unsortedList) {
-        tempList = unsortedList;
+    // This method performs sorting just as sort(int[] unsortedArray does, but prints the progress of the sorting.
+    public int[] sortShowFull(int[] unsortedArray) {
+        sortingArray = unsortedArray;
         
         while (swapped) {
             swapped = false;
             
-            for (int i = 0; i < unsortedList.length; i++) {
-                if (i != unsortedList.length - 1) {
-                    if (unsortedList[i] > unsortedList[i + 1]) {
+            for (int i = 0; i < unsortedArray.length; i++) {
+                if (i != this.sortingArray.length - 1) {
+                    if (this.sortingArray[i] > this.sortingArray[i + 1]) {
                         swap(i, (i + 1));
                     }
                 }
-                System.out.println(Arrays.toString(unsortedList));
+                System.out.println(Arrays.toString(unsortedArray));
             }
         }
-        return tempList;
+        return sortingArray;
     }
     
     // This method performs swapping of two variables if the first one is greater than the second.
     private void swap(int indexA, int indexB) {
-        if (indexA != tempList.length) {
-            int tempA = tempList[indexA];
-            int tempB = tempList[indexB];
+        if (indexA != this.sortingArray.length) {
+            int tempA = this.sortingArray[indexA];
+            int tempB = this.sortingArray[indexB];
         
-            tempList[indexA] = tempB;
-            tempList[indexB] = tempA;
+            this.sortingArray[indexA] = tempB;
+            this.sortingArray[indexB] = tempA;
         
             swapped = true;
         }
+    }
+    
+    // Get method for the sorted array.
+    public int[] getSortedArray() {
+        return this.sortingArray;
     }
 }
