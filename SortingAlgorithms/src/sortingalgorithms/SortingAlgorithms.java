@@ -11,22 +11,25 @@ import java.util.Random;
 public class SortingAlgorithms {
     public static void main(String[] args) {
         int[] randomArray;
-        randomArray = fillRandomArray(randomArray = new int[18]);
+        int arrayLength = 18;
+        randomArray = fillRandomArray(randomArray = new int[arrayLength]);
         BubbleSort bubbleSort = new BubbleSort();
         QuickSort quickSort = new QuickSort();
         MergeSort mergeSort = new MergeSort();
+        InsertionSort insertionSort = new InsertionSort();
         print(randomArray);
         
         // Testing the different sorting algorithms.
         //bubbleSort.sort(randomArray);
         //quickSort.sort(randomArray);
-        mergeSort.sort(randomArray);
+        //mergeSort.sort(randomArray);
+        insertionSort.sort(randomArray);
         
         // Printing the different sorted arrays.
         //print(bubbleSort.getSortedArray());
         //print(quickSort.getSortedArray());
-        print(mergeSort.getSortingArray());
-        
+        //print(mergeSort.getSortedArray());
+        print(insertionSort.getSortedArray());
     }
     
     // This method fills an array of random numbers between 0 and 500 and return it.

@@ -4,7 +4,7 @@ package sortingalgorithms;
  *
  * @author Geir Haugen
  * 
- * This class shows an example for how the merge sort algorithm can be implemented.
+ * This class shows an example of how the merge sort algorithm can be implemented.
  */
 public class MergeSort {
     private int[] sortingArray;     // The main array. Will become the sorted array when sorting is finished.
@@ -69,7 +69,7 @@ public class MergeSort {
         
     }
     // Get method for the sorted array.
-    public int[] getSortingArray() {
+    public int[] getSortedArray() {
         return this.sortingArray;
     }
 }
