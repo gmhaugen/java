@@ -14,15 +14,18 @@ public class SortingAlgorithms {
         randomArray = fillRandomArray(randomArray = new int[18]);
         BubbleSort bubbleSort = new BubbleSort();
         QuickSort quickSort = new QuickSort();
+        MergeSort mergeSort = new MergeSort();
         print(randomArray);
         
         // Testing the different sorting algorithms.
-        bubbleSort.sort(randomArray);
+        //bubbleSort.sort(randomArray);
         //quickSort.sort(randomArray);
+        mergeSort.sort(randomArray);
         
         // Printing the different sorted arrays.
-        print(bubbleSort.getSortedArray());
+        //print(bubbleSort.getSortedArray());
         //print(quickSort.getSortedArray());
+        print(mergeSort.getSortingArray());
         
     }
     
