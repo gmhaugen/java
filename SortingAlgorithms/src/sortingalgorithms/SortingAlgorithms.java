@@ -17,19 +17,22 @@ public class SortingAlgorithms {
         QuickSort quickSort = new QuickSort();
         MergeSort mergeSort = new MergeSort();
         InsertionSort insertionSort = new InsertionSort();
+        SelectionSort selectionSort = new SelectionSort();
         print(randomArray);
         
         // Testing the different sorting algorithms.
         //bubbleSort.sort(randomArray);
         //quickSort.sort(randomArray);
         //mergeSort.sort(randomArray);
-        insertionSort.sort(randomArray);
+        //insertionSort.sort(randomArray);
+        selectionSort.sort(randomArray);
         
         // Printing the different sorted arrays.
         //print(bubbleSort.getSortedArray());
         //print(quickSort.getSortedArray());
         //print(mergeSort.getSortedArray());
-        print(insertionSort.getSortedArray());
+        //print(insertionSort.getSortedArray());
+        print(selectionSort.getSortedArray());
     }
     
     // This method fills an array of random numbers between 0 and 500 and return it.
