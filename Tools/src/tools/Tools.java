@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package tools;
 
 /**
@@ -12,7 +7,9 @@ package tools;
 public class Tools {
     public static void main(String[] args) {
         DecimalToBinary dtb = new DecimalToBinary();
-        dtb.convert(578);
+        int decimalNumber = 4352346;
+        dtb.convert(decimalNumber);
         System.out.println(dtb.getBinary().toString());
+        System.out.println(decimalNumber + " = " + dtb.toString());
     }
 }
