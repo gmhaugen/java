@@ -11,5 +11,10 @@ public class Tools {
         dtb.convert(decimalNumber);
         System.out.println(dtb.getBinary().toString());
         System.out.println(decimalNumber + " = " + dtb.toString());
+        
+        BinaryToDecimal btd = new BinaryToDecimal();
+        String binaryNumber = "10101100111";
+        btd.convert(binaryNumber);
+        System.out.println(binaryNumber + " = " + btd.getDecimal());
     }
 }
